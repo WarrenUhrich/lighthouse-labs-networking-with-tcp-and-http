@@ -1,2 +1,10 @@
-# lighthouse-labs-networking-with-tcp-and-http
-Lighthouse Labs "Networking with TCP and HTTP" lecture. 
+# Lighthouse Labs | Networking with TCP and HTTP
+
+# To-Do
+
+* [ ] Networking and Protocols
+* [ ] TCP
+* [ ] HTTP Fundamentals
+* [ ] TCP Demo via NodeJS
+
+

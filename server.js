@@ -6,24 +6,32 @@ const server = net.createServer();
 const connections = [];
 
 server.on('connection', (connection) => {
+    connection.setEncoding('utf-8');
+
     // console.log('A client has connected.');
     connections.push(connection);
 
-    connection.setEncoding('utf-8');
-
     // Listen for data writes from clients.
     connection.on('data', (data) => {
+        console.log(
+            'A client submitted:'
+            + data
+        );
+
         // Sets name if pattern matches:
         // name: Warren
         if (data.startsWith('name:')) {
+            data = data + ' ';
             const name = data.split(' ')[1];
+            console.log(name);
             return connection.username = name;
         }
 
         for (const conn of connections ) {
             if (conn !== connection && !conn._writableState.finished) {
+                const name = typeof connection.username !== 'undefined' ? connection.username.trim() : 'Client';
                 conn.write(
-                    typeof conn.name !== 'undefined' ? conn.name : 'Client'
+                    name
                     + ' says: '
                     + data.trim()
                 );

@@ -101,4 +101,32 @@ These map well to CRUD operations, thankfully!
 * UPDATE: PUT/PATCH
 * DELETE: DELETE
 
+### Paths
+
+Paths are an address representing a resource (data, or a file.) Think `/users/`, `/dinosaurs/`, or a more "specific" path like `user/3`, `/dinosaur/tyrannosaurus` or `/images/porsche.jpg`.
+
+### HTTP Status Codes
+
+Status codes ranges:
+
+  * 100-199 represent information.
+  * 200-299 represent a success.
+  * 300-399 represent a redirection.
+  * 400-499 represent client errors.
+  * 500-599 represent server errors.
+
+Common errors include:
+
+* 102: Processing
+* 200: OK
+* 301: Permanent Redirect
+* 302: Temporary Redirect
+* 400: Bad Request
+* 404: Resource not Found
+* 418: I'm a Teapot
+* 500: Internal Server Error
+* 503: Service Unavailable
+
+## Building a Basic TCP App in NodeJS
+
 

@@ -29,7 +29,7 @@
             * & -> Tells us there is a new key-value pair
     * :80 -> Port
 
-![Anatomy of a Web Address Diagram](https://raw.githubusercontent.com/WarrenUhrich/lighthouse-labs-networking-with-tcp-and-http/2022.04.19-web-flex-mar-21-day-networking-with-tcp-and-http/anatomy-of-a-web-request-diagram.png)
+![Anatomy of a Web Address Diagram](https://raw.githubusercontent.com/WarrenUhrich/lighthouse-labs-networking-with-tcp-and-http/2022.04.19-web-flex-mar-21-day-networking-with-tcp-and-http/anatomy-of-a-web-address-diagram.png)
 
 ## Client-Server Model
 

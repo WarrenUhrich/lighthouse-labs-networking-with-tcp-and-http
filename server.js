@@ -13,10 +13,18 @@ server.on('connection', (connection) => {
 
     // Listen for data writes from clients.
     connection.on('data', (data) => {
+        // Sets name if pattern matches:
+        // name: Warren
+        if (data.startsWith('name:')) {
+            const name = data.split(' ')[1];
+            return connection.username = name;
+        }
+
         for (const conn of connections ) {
             if (conn !== connection && !conn._writableState.finished) {
                 conn.write(
-                    'Client says: '
+                    typeof conn.name !== 'undefined' ? conn.name : 'Client'
+                    + ' says: '
                     + data.trim()
                 );
             }

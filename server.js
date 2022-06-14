@@ -12,12 +12,15 @@ server.on('connection', (connection) => {
 
     connections.push(connection);
 
+    // Handle receiving data from clients.
     connection.on('data', (data) => {
         console.log(
             'A client submitted:',
             data
         );
     });
+
+    connection.write('Hello client, you are now connected.');
 });
 
 server.listen(PORT, () => {

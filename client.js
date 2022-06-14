@@ -8,3 +8,7 @@ const config = {
 const client = net.createConnection(config);
 
 client.setEncoding('utf-8');
+
+process.stdin.on('data', (data) => {
+    client.write(data);
+});

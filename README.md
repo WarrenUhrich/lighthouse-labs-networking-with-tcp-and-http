@@ -11,7 +11,7 @@
     * Browser -> Computer -> Router -> ISP -> DNS -> (Cloud / Internet Nodes) -> Web Server
 * HTTP port is :80
 
-![Network and Web Request Diagram](https://raw.githubusercontent.com/WarrenUhrich/lighthouse-labs-networking-with-tcp-and-http/2022.04.19-web-flex-mar-21-day-networking-with-tcp-and-http/network-and-web-request-diagram.png)
+![Network and Web Request Diagram](https://github.com/WarrenUhrich/lighthouse-labs-networking-with-tcp-and-http/blob/2022.06.14-web-flex-day-16may2022/networking-diagram.png?raw=true)
 
 * Anatomy of a Domain
     * HTTP -> Protocol
@@ -25,7 +25,7 @@
             * & -> Tells us there is a new key-value pair
     * :80 -> Port
 
-![Anatomy of a Web Address Diagram](https://raw.githubusercontent.com/WarrenUhrich/lighthouse-labs-networking-with-tcp-and-http/2022.04.19-web-flex-mar-21-day-networking-with-tcp-and-http/anatomy-of-a-web-address-diagram.png)
+![Anatomy of a Web Address Diagram](https://github.com/WarrenUhrich/lighthouse-labs-networking-with-tcp-and-http/blob/2022.06.14-web-flex-day-16may2022/domain-anatomy.png?raw=true)
 
 ## Client-Server Model
 

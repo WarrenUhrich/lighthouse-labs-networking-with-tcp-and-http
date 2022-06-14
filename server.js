@@ -19,9 +19,15 @@ server.on('connection', (connection) => {
             data
         );
 
+        if (data.startsWith('name: ')) {
+            return connection.username = (data + ' ').split(' ')[1];
+        }
+
+        // console.log(connections);
+
         for (const conn of connections) {
             if (conn !== connection) {
-                conn.write(data);
+                conn.write(`${connection.username}: ${data.trim()}`);
             }
         }
     });

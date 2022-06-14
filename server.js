@@ -18,6 +18,12 @@ server.on('connection', (connection) => {
             'A client submitted:',
             data
         );
+
+        for (const conn of connections) {
+            if (conn !== connection) {
+                conn.write(data);
+            }
+        }
     });
 
     connection.write('Hello client, you are now connected.');

@@ -20,7 +20,7 @@ server.on('connection', (connection) => {
         );
 
         if (data.startsWith('name: ')) {
-            return connection.username = (data + ' ').split(' ')[1];
+            return connection.username = (data + ' ').split(' ')[1].trim();
         }
 
         // console.log(connections);

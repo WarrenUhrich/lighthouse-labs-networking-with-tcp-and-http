@@ -1,6 +1,6 @@
 # Lighthouse Labs | Networking with TCP and HTTP
 
-[GitHub Repository Branch](https://github.com/WarrenUhrich/lighthouse-labs-networking-with-tcp-and-http/tree/2022.08.31-web-ft-east-22august2022) | [Vimeo Video Recording (Coming Soon!)](#coming-soon)
+[GitHub Repository Branch](https://github.com/WarrenUhrich/lighthouse-labs-networking-with-tcp-and-http/tree/2022.08.31-web-ft-east-22august2022) | [Vimeo Video Recording](https://vimeo.com/745080095/f58c683eee)
 
 * [X] Networking and Protocols
 * [X] TCP

@@ -8,6 +8,8 @@ server.listen(PORT, () => {
     console.log('TCP Server running on port:', PORT);
 });
 
+const allConnections = [];
+
 server.on('connection', (connection) => {
     console.log('A client has connected!');
 
@@ -21,5 +23,13 @@ server.on('connection', (connection) => {
     connection.on('data', (userInput) => {
         userInput = userInput.trim();
         console.log(userInput);
+
+        for(const conn of allConnections) {
+            if(conn !== connection) {
+                conn.write(userInput);
+            }
+        }
     });
+
+    allConnections.push(connection);
 });

@@ -24,9 +24,15 @@ server.on('connection', (connection) => {
         userInput = userInput.trim();
         console.log(userInput);
 
+        if(userInput.startsWith('name: ')) {
+            const name = userInput.split(' ')[1];
+            return connection.username = name;
+        }
+
         for(const conn of allConnections) {
             if(conn !== connection) {
-                conn.write(userInput);
+                const name = connection.username ? connection.username : 'Guest';
+                conn.write(`${name}: ${userInput}`);
             }
         }
     });

@@ -12,3 +12,7 @@ client.setEncoding('utf-8');
 client.on('data', (data) => {
     console.log(data);
 });
+
+process.stdin.on('data', (userInput) => {
+    client.write(userInput);
+});

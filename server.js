@@ -17,4 +17,9 @@ server.on('connection', (connection) => {
     connection.on('error', () => {
         console.log('Connection error.');
     });
+
+    connection.on('data', (userInput) => {
+        userInput = userInput.trim();
+        console.log(userInput);
+    });
 });

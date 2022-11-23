@@ -6,3 +6,13 @@ const config = {
 };
 
 const client = net.createConnection(config);
+
+client.setEncoding('utf-8');
+
+client.on('data', (data) => {
+    console.log('Data from Server:', data);
+});
+
+process.stdin.on('data', (userInput) => {
+    client.write(userInput);
+});

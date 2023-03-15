@@ -21,9 +21,16 @@ server.on('connection', (connection) => {
 
         console.log('Data received: ' + clientData);
 
+        if(clientData.startsWith('name:')) {
+            const newUsername = clientData.split(':')[1];
+            connection.username = newUsername;
+            return;
+        }
+
         for(const conn of allConnections) {
             if(conn !== connection) {
-                conn.write(clientData);
+                const username = connection.username ? connection.username : 'Guest';
+                conn.write(`${username}: ${clientData}`);
             }
         }
     });

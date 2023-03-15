@@ -7,12 +7,26 @@ server.listen(PORT, () => {
     console.log('TCP Server is listening on PORT:', PORT);
 });
 
+const allConnections = [];
+
 server.on('connection', (connection) => {
     console.log('A client has connected!');
 
+    connection.setEncoding('utf-8');
+    
     connection.write('Welcome to the server!'); // Send to client.
 
     connection.on('data', (clientData) => {
+        clientData = clientData.trim(); // Cut off extra spaces at the beginning / end, incl. newlines
+
         console.log('Data received: ' + clientData);
+
+        for(const conn of allConnections) {
+            if(conn !== connection) {
+                conn.write(clientData);
+            }
+        }
     });
+
+    allConnections.push(connection);
 });

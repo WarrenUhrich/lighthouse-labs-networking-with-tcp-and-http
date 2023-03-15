@@ -7,6 +7,12 @@ server.listen(PORT, () => {
     console.log('TCP Server is listening on PORT:', PORT);
 });
 
-server.on('connection', () => {
+server.on('connection', (connection) => {
     console.log('A client has connected!');
+
+    connection.write('Welcome to the server!'); // Send to client.
+
+    connection.on('data', (clientData) => {
+        console.log('Data received: ' + clientData);
+    });
 });

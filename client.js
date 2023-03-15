@@ -5,3 +5,13 @@ const config = {
 };
 
 const client = net.createConnection(config);
+
+client.setEncoding('utf-8');
+
+client.on('data', (serverData) => {
+    console.log(serverData);
+});
+
+process.stdin.on('data', (userInput) => {
+    client.write(userInput); // Send to server.
+});

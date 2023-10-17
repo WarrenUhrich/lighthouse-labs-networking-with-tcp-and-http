@@ -1,10 +1,10 @@
 const net = require('net');
 const config = {
-    // port: 7070,
-    // host: 'localhost'
+    port: 7070,
+    host: 'localhost'
     // tcp://4.tcp.ngrok.io:10942
-    host: '4.tcp.ngrok.io',
-    port: 10942
+    // host: '4.tcp.ngrok.io',
+    // port: 10942
 };
 
 const client = net.createConnection(config);
